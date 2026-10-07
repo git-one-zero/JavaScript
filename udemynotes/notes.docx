@@ -1,0 +1,103 @@
+strict mode 
+strict mode is used to identify mistakes in code and makes it easier to debug
+just use ---> use 'use strict'; at the beginning of the code if any code is present before it won't work .(commends are ignored by js).
+
+
+What is a function ?
+function is a piece of code we can use over and over .
+
+to use a function (calling,running or invoking) the function is carried out --> functionName()
+
+ return is something the function gives out as a result of it's execution.
+we can use this result in other parts of the code and for that we need to save this result in a variable .
+
+Motto of function --> Don't repeat Your code or make dry codes.
+
+parameteres and arguments -parameters are just like variables that you can pnly use inside a function and arguments are actual values inside those variables or the values passed to the functions while calling it ..
+
+function declaration vs function expression
+
+function expressions produce a value and can be stored inside a variable or the function can be used as an expression .
+they can't be called before declaration.(no hoisting)
+ 
+In js a statement -->performs an action/ Instruction
+expression -->produces a value 
+
+Types of functions
+
+1.Normal /Named function
+A function declared using the function keyword and an identifier (name) is called a normal or named
+function. The same identifier with parentheses is used to invoke it.
+• The arguments object can be used here.
+• Function hoisting is allowed for normal/named function declarations.
+function demo() {
+console.log("I am demo function");
+}
+demo();
+function sum(a, b) {
+console.log(arguments);
+return a + b;
+}
+console.log(sum(10, 20));
+2.Anonymous function
+A function declared without an identifier (function name) is called an anonymous function. It is commonly
+stored in a variable so it can be called.
+var variableName = function (params) {
+// code to execute
+};
+variableName(args);
+var add = function (a, b) {
+return a + b;
+};
+console.log(add(10, 20));
+3.Arrow function
+An arrow function is a shorter syntax for writing functions in JavaScript. It was introduced in ES6 (2015)
+and is commonly useful for callbacks.
+const functionName = (parameters) => {
+// function body
+};
+=> is called the fat arrow.
+Arrow Function Examples
+// No arguments
+let arrow = () => {
+console.log("arrow function");
+};
+arrow();
+// Multiple arguments
+const add = (a, b) => {
+return a + b;
+};
+console.log(add(20, 30));
+7. Arrow Function Characteristics
+1. No arguments
+() => {
+// function body
+}
+2. One argument
+let square = a => {
+console.log(a * a);
+};
+square(2);
+3. More than one argument
+const add = (a, b) => {
+console.log(a + b);
+};
+add(20, 30);
+4. Implicit Return
+If the function body contains only one expression, the expression can be returned automatically without
+using the return keyword.
+const square = x => x * x;
+console.log(square(3)); // 9
+5. Explicit Return
+When you use the return keyword explicitly, or when the function contains multiple statements, use curly
+braces.
+const add = (a, b) => {
+return a + b;
+};
+console.log(add(50, 60));
+const greet = (name) => {
+console.log("Hello");
+console.log(name);
+};
+greet("John");
+
